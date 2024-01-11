@@ -1,5 +1,5 @@
 .container {
-    width: 400px;
+    width: 100%;
     padding: 20px;
     border: 2px solid #442788;
     border-radius: 8px;
@@ -40,4 +40,18 @@ select {
 
 .bt:not(:hover) {
     background-color: #442788;
+}
+
+.alert {
+    color: #ff0000;
+    animation: fadeOut 12s forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }

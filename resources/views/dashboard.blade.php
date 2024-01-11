@@ -1,4 +1,18 @@
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // Aguarde 3 segundos e remova a classe 'fade-out'
+        setTimeout(function () {
+            $('#alertM').removeClass('alert');
+        }, 7000);
+
+        setTimeout(function () {
+            $('#alertM').remove();
+        }, 7001);
+    });
+</script>
 
 <x-app-layout>
     <x-slot name="header">
@@ -12,6 +26,19 @@
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div > <!-- class="p-6 text-black-900 dark:text-black-100" -->
                     <div class="container">
+
+                        @if(isset($mensagem1))
+                        <div id="alertM" class="alert">
+                            {{ $mensagem1 }}
+                        </div>
+                        @endif
+
+                        @if(isset($mensagem2))
+                        <div id="alertM" class="alert">
+                            {{ $mensagem2 }}
+                        </div>
+                        @endif
+
                         <form action="{{ route('result.query') }}" method="POST" id="currencyForm">
                             @csrf
                             <label for="moedaOrigem">Moeda de Origem (BRL):</label>

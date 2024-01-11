@@ -28,7 +28,6 @@ Route::get('/history', [MainController::class, 'index2'])->middleware(['auth', '
 Route::middleware('auth')->group(function () {
     Route::post('/result', [MainController::class, 'store'])->name('result.query');
     Route::get('/result/{id}', [MainController::class, 'show'])->name('result.history');
-    //Route::get('/history', [MainController::class, ''])->name('conversion.history');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

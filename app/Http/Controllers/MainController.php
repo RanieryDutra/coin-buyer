@@ -9,6 +9,7 @@ use App\Models\History;
 use Illuminate\Support\Facades\Auth;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Session;
 use NumberFormatter;
 
 class MainController extends Controller
@@ -78,7 +79,7 @@ class MainController extends Controller
 
                     $dataHoraConversao = Carbon::now()->setTimezone('America/Sao_Paulo')->format('Y-m-d H:i:s');
 
-                    $History = new History([
+                    /*$History = new History([
                         'id_usuario' => Auth::id(),
                         'origin_currency' => $request->moedaOrigem,
                         'destination_currency' => $request->moedaDestino,
@@ -92,7 +93,7 @@ class MainController extends Controller
                         'conversion_data' => $dataHoraConversao
                     ]);
 
-                    $History->save();
+                    $History->save();*/
 
                     return view('result',
                     [
@@ -124,7 +125,7 @@ class MainController extends Controller
 
                     $dataHoraConversao = Carbon::now()->setTimezone('America/Sao_Paulo')->format('Y-m-d H:i:s');
 
-                    $History = new History([
+                    /*$History = new History([
                         'id_usuario' => Auth::id(),
                         'origin_currency' => $request->moedaOrigem,
                         'destination_currency' => $request->moedaDestino,
@@ -138,7 +139,7 @@ class MainController extends Controller
                         'conversion_data' => $dataHoraConversao
                     ]);
 
-                    $History->save();
+                    $History->save();*/
 
                     return view('result',
                     [
@@ -158,8 +159,14 @@ class MainController extends Controller
 
                 //dd($request->metodoPagamento);
                 //dd($dataArray[0]['code']);
-        }   else dd('notGod2'); 
-    } else dd('notGod1');
+        }   else {
+                //Session::flash('mensagem2', 'Valor de compra, precisa está entre R$ 1.000 e R$ 100.000,00');//dd('notGod2'); 
+                return view('dashboard', ['mensagem2' => 'Valor de compra, precisa está entre R$ 1.000 e R$ 100.000,00 !!']);
+            }
+    } else {
+        //Session::flash('mensagem1', 'Moeda Origem não é BRL!!');//dd('notGod1');
+        return view('dashboard', [ 'mensagem1' => 'Moeda de origem não é BRL!!' ]);
+        }
 
     }
     
