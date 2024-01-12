@@ -79,7 +79,7 @@ class MainController extends Controller
 
                     $dataHoraConversao = Carbon::now()->setTimezone('America/Sao_Paulo')->format('Y-m-d H:i:s');
 
-                    /*$History = new History([
+                    $History = new History([
                         'id_usuario' => Auth::id(),
                         'origin_currency' => $request->moedaOrigem,
                         'destination_currency' => $request->moedaDestino,
@@ -93,7 +93,7 @@ class MainController extends Controller
                         'conversion_data' => $dataHoraConversao
                     ]);
 
-                    $History->save();*/
+                    $History->save();
 
                     return view('result',
                     [
@@ -125,7 +125,7 @@ class MainController extends Controller
 
                     $dataHoraConversao = Carbon::now()->setTimezone('America/Sao_Paulo')->format('Y-m-d H:i:s');
 
-                    /*$History = new History([
+                    $History = new History([
                         'id_usuario' => Auth::id(),
                         'origin_currency' => $request->moedaOrigem,
                         'destination_currency' => $request->moedaDestino,
@@ -139,7 +139,7 @@ class MainController extends Controller
                         'conversion_data' => $dataHoraConversao
                     ]);
 
-                    $History->save();*/
+                    $History->save();
 
                     return view('result',
                     [
