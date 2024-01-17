@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Auth;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Price;
 use NumberFormatter;
 
 class MainController extends Controller
@@ -19,7 +21,7 @@ class MainController extends Controller
      */
     public function index()
     {
-        //
+        return view('mails/price');
     }
 
     public function index2()
@@ -95,6 +97,17 @@ class MainController extends Controller
 
                     $History->save();
 
+                    $email = Auth::user()->email;
+                    $name = Auth::user()->name;
+
+                    
+                    $sent = Mail::to($email, $name)->send(new Price ([
+                        'fromName' => $name,
+                        'fromEmail' => $email,
+                        'subject' => 'Cotação realizada',
+                        'message' => $History
+                    ]));
+
                     return view('result',
                     [
                         'moedaOrigem' => $request->moedaOrigem,
@@ -140,6 +153,17 @@ class MainController extends Controller
                     ]);
 
                     $History->save();
+
+                    $email = Auth::user()->email;
+                    $name = Auth::user()->name;
+
+                    
+                    $sent = Mail::to($email, $name)->send(new Price ([
+                        'fromName' => $name,
+                        'fromEmail' => $email,
+                        'subject' => 'Cotação realizada',
+                        'message' => $History
+                    ]));
 
                     return view('result',
                     [
