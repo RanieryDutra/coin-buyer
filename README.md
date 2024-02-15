@@ -1,66 +1,29 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<img src="https://i.imgur.com/vSselEU.jpg" alt="tela_principal" width="454" height="250"> <img src="https://i.imgur.com/cMSzIVK.jpg" alt="tela_login" width="454" height="250">
+<img src="https://i.imgur.com/B9GS87M.jpg" alt="tela_registro" width="454" height="250"> <img src="https://i.imgur.com/VTFnkvr.jpg" alt="tela_consulta" width="454" height="250">
+<img src="https://i.imgur.com/om3q2Qb.jpg" alt="tela_resultado" width="454" height="250"> <img src="https://i.imgur.com/XUl4S7w.jpg" alt="tela_historico" width="454" height="250">
+<img src="https://i.imgur.com/7Hwjnvb.jpg" alt="tela_editar_perfil" width="454" height="250">
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Coin Buyer
+O Coin Buyer oferece aos usuários a capacidade de realizar cotações e consultas sobre o valor de moedas, sejam elas fiduciárias (por exemplo, Dólar) ou digitais (por exemplo, Bitcoin). Os usuários podem realizar transações, obtendo informações detalhadas sobre as taxas aplicáveis e a quantidade da moeda que será adquirida com o valor especificado. Isso permite uma tomada de decisão informada, garantindo uma compreensão clara do custo e do retorno ao realizar transações no Coin Buyer.
 
-## About Laravel
+## Introdução
+Este projeto foi desenvolvido com o propósito de estudo, originando-se de um teste técnico que decidi construí-lo.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+A essência do projeto reside na capacidade do usuário de realizar cotações e consultas sobre o valor de moedas. Além disso, proporciona a funcionalidade de acessar um histórico de cotações, permitindo análises para embasar decisões e tirar conclusões a partir de pesquisas prévias. É importante ressaltar que cada cotação efetuada pelo usuário resulta no envio de um e-mail para o endereço cadastrado, garantindo que o mesmo tenha acesso às informações mesmo que não possa visitar o site diretamente. Este sistema visa proporcionar uma experiência abrangente e informativa aos usuários, contribuindo para seu entendimento e uso efetivo da plataforma.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Pré-requisitos
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Composer >= 2.5.8
+- PHP >= 8.2.7
+- Laravel = 10x
+- MySQL Workbench 8.0 CE
 
-## Learning Laravel
+### Tecnologias
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+![Laravel](https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white)
+![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
